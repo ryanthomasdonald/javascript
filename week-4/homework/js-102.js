@@ -104,9 +104,11 @@ factors(126);
 console.log();
 
 // 6
-
+console.log("Still Working...");
+console.log();
 // 7
-
+console.log("Still Working...");
+console.log();
 // 8
 
 function leetSpeak(phrase){
