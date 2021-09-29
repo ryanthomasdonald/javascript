@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 101</title>
+    <style>
+        .bgYellow{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+        var body = document.querySelector("body") ;  // body retrieved
+        var ul = document.createElement("ul");
+        var liHTMLFragment = "";
+        for(var index = 0; index < days.length; index++){
+            liHTMLFragment += `<li>${days[index]}</li>`;
+        }
+        ul.innerHTML = liHTMLFragment;
+        body.appendChild(ul)                         // appending object to object, not string to object
+    </script>
+</body>
+</html>

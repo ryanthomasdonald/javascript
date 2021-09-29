@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 101</title>
+    <style>
+        .bgYellow{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div>Div 1</div>
+    <div>Div 2</div>
+    <div class="bgYellow">Div 3</div>
+    <p>I'm a p tag.</p>
+
+    <script>
+        // var divNode = document.getElementsByTagName("div")[0] // returns as an array
+
+        // // divNode.textContent = "I'm a div and I replaced 'Hello world'." // cannot insert functional markup
+        // divNode.innerHTML = "<h1>I'm a div and I replaced 'Hello world'.</h1>" // CAN insert functional markup
+        var pTag = document.querySelector("p") // same selector syntax as CSS, but only selects first instance
+        var divs = document.querySelectorAll("div") // selects all divs
+        var moreDivs = document.querySelectorAll(".bgYellow") // again, note CCS-like syntax
+        console.log(pTag)
+        console.log(divs)
+    </script>
+</body>
+</html>

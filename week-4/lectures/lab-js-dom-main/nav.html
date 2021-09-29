@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 101</title>
+    <style>
+        .bgYellow{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <nav class="bgYellow">
+        Existing text
+    </nav>
+    <script>
+        // create anchor tag
+        var a = document.createElement("a");
+        // setAttribute, for href, set innerText
+        a.setAttribute("href", "https://google.com");
+        a.textContent = "Google";
+        // retrieve nav element out of DOM
+        var nav = document.querySelector("nav");
+        // append new element (anchor) to nav tag/element
+        nav.appendChild(a);
+
+        var h1 = document.createElement("h1");
+        h1.textContent = "Learning the DOM";
+        nav.appendChild(h1) ;                      // .append() also works
+    </script>
+</body>
+</html>

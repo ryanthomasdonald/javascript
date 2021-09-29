@@ -16,6 +16,14 @@
         <li id="four">balsamic vinegar</li>
       </ul>
     </div>
-    <script src="js/node-list.js"></script>
+    <script>
+      var hotItems = document.querySelectorAll("li.hot") // selects all hot items
+
+      if (hotItems.length > 0){
+        for (var i = 0; i < hotItems.length; i++){       // changes them to cool items
+          hotItems[i].className = "cool";
+        }
+      }
+    </script>
   </body>
 </html>
