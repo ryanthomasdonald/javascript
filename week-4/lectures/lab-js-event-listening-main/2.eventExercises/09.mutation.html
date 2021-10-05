@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript </title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div id="page">
+      <h1></h1>
+      <h2>Buy Groceries <span id="counter">1</span></h2>
+      <ul id="list">
+        <li>fresh figs</li>
+      </ul>
+      <div class="button"><a href="/additem" class="add">Add list item</a></div>
+    </div>
+    <script>
+      let ul = document.querySelector("ul");
+      let anchor = document.querySelector(".add");
+      let counter = document.querySelector("#counter")
+      anchor.addEventListener("click", (event) => {
+        let li = document.createElement("li")
+        event.preventDefault()
+        li.innerText = "New Item"
+        ul.append(li)
+      })
+    </script>
+  </body>
+</html>

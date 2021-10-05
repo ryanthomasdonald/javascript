@@ -151,6 +151,13 @@ console.log();
 
 // 13
 
-// function acronym(words){
+function acronym(arr){
+    let acronym = arr.reduce((acc, current) => {                 // worked through in class
+        return acc + current[0].toUpperCase();
+    }, "");
+    return acronym;
+};
 
-// }
+let nasa = ['national', 'aeronautics', 'space', 'administration'];
+
+console.log(acronym(nasa));

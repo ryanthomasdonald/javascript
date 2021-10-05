@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <script>
+        // retrieve body
+        let body = document.querySelector("body")
+        // attach event listener for "keydown"
+        body.addEventListener("keydown", () => {
+            if (event.key === "p"){
+                body.style.backgroundColor = "purple";
+            };
+        });
+        // attach event listener for "keyup"
+        body.addEventListener("keyup", () => {
+            if (event.key === "p"){
+                body.style.backgroundColor = "white";
+            };
+        });
+    </script>
+</body>
+</html>

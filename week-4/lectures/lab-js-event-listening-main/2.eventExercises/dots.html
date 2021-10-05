@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOTS!!! </title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+        body{
+            background-color: tan
+        }
+        .dot{
+            height: 20px;
+            width: 20px;
+            background-color: green;
+            border-radius: 50%;
+            position: absolute;
+        }
+        .dot1{
+            height: 30px;
+            width: 30px;
+            background-color: black;
+            border-radius: 50%;
+            position: absolute;
+        }
+        .dot2{
+            height: 40px;
+            width: 40px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let dots = [{className: "dot", width: 20}, {className: "dot1", width: 30}, {className: "dot2", width: 40}]
+        window.addEventListener("click", (event) => {
+            let dot = document.createElement("div");
+            let index = Math.floor((Math.random() * 3));
+            dot.className = dots[index].className
+            dot.width = dots[index].width
+            // dot.setAttribute("class", "dot");
+            // dot.width = 20
+            dot.style.left = (event.x - dot.width / 2).toString() + "px";
+            dot.style.top = (event.y - dot.width / 2).toString() + "px";
+            document.body.appendChild(dot);
+        })
+    </script>
+</body>
+</html>

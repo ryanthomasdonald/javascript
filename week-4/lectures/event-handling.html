@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling</title>
+    <style>
+        /* div{
+            background-color: yellow;
+            height: 300px;
+        } */
+        #big-red-button{
+            background-color: tomato;
+            width: 200px;
+            height: 200px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="window.alert('Thanks for clicking.')">Click me!</button>
+
+    <div id="big-red-button">
+        <div>Big Red Button</div>
+        <div id="count">0</div>
+    </div>
+
+    <script>
+        // // METHOD 1
+        // // retrieve nodes out of DOM
+        // let bigRedButton = document.querySelector("#big-red-button");
+        // let countDiv = document.querySelector("#count");
+        // // attach onclick event listener
+        // bigRedButton.onclick = () => {                                        // anon. function
+        //     let count = parseInt(currentDiv.textContent);                     // converts to integer
+        //     count++;
+        //     countDiv.textContent = count.toString();
+        // };
+
+        // // METHOD 2
+        // let clickCount = 0;
+        // let bigRedButton = document.querySelector("#big-red-button");
+        // let countDiv = document.querySelector("#count");
+        // bigRedButton.addEventListener("click", () => {                           // "click" is event to be "listened to" and then there's an anon. function
+        //     clickCount++;
+        //     countDiv.textContent = clickCount.toString();
+        // });
+
+        
+    </script>
+</body>
+</html>
